@@ -1,0 +1,215 @@
+<html>
+	<head>
+		<title>♥</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="image" id="image"></div>
+		
+		<div class="container" id="right" onmouseover="rightHover();" onmouseout="unRightHover();">
+			<div class="iconTray" id="icon-right">
+				<div class="icon" id="icon1-r">
+				
+				</div>
+				<div class="icon" id="icon2-r">
+					<img src="test.png" />
+				</div>
+				<div class="icon" id="icon3-r">
+					
+				</div>
+			</div>
+			<div class="menu" id="menu-right">
+				<div class="col" id="col-1">
+					<p>Anime</p>
+					<a href="http://www.nyaa.si/">Nyaa</a>
+					<a href="http://anichart.net/">Anichart</a>
+					<a href="https://mangadex.org/">MangaDex</a>
+					<a href="https://animebytes.tv/">Animebytes</a>
+				</div>
+				<div class="col" id="col-2">
+					<p>4chan</p>
+					<a href="http://boards.4chan.org/a/">Anime</a>
+					<a href="http://boards.4chan.org/v/">Video Games</a>
+					<a href="http://boards.4chan.org/vg/">Games General</a>					
+					<a href="http://boards.4chan.org/ck/">Cooking</a>
+					<a href="http://boards.4chan.org/wg/">Wallpapers</a>
+				</div>
+				<div class="col" id="col-3">
+					<p>Other</p>
+					<a href="https://www.reddit.com/">Reddit</a>
+					<a href="https://http://www.neopets.com">Neopets</a>
+					<a href="https://www.amazon.com/">Amazon</a>
+					<a href="https://thepiratebay.org/">Pirate Bay</a>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="container" id="left" onmouseover="leftHover();" onmouseout="unleftHover();">
+			<div class="iconTray" id="icon-left">
+				<div class="icon" id="icon1-l">
+
+				</div>
+				<div class="icon" id="icon2-l">
+					<img src="left.png" />
+				</div>
+				<div class="icon" id="icon3-l"></div>
+			</div>
+			<div class="menu" id="menu-left">
+				<div class="col" id="col-1">
+					<p>Video</p>
+					<a href="https://www.youtube.com/">YouTube</a>
+					<a href="https://www.twitch.tv/">Twitch</a>
+					<a href="https://www.netflix.com/">Netflix</a>
+				</div>
+				<div class="col" id="col-2">
+					<p>Art</p>
+					<a href="https://www.tumblr.com/">tumblr</a>
+					<a href="https://www.pixiv.net/">Pixiv</a>
+					<a href="https://www.deviantart.com/">Deviant Art</a>
+					<a href="http://chloechantelle.com/guide">Ricing Guide</a>
+				</div>
+				<div class="col" id="col-3">
+					<p>School</p>
+					<a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
+					<a href="https://courseware.ku.edu/">Blackboard</a>
+					<a href="https://www.google.com/drive/">Google Drive</a>
+					<a href="https://mail.ku.edu/owa/#path=/mail">Outlook</a>
+				</div>	<div class="col" id="col-3">
+					<p>Comics</p>
+					<a href="https://www.oglaf.com/">Oglaf</a>
+					<a href="http://pbfcomics.com/">Pbf</a>
+					<a href="http://shencomix.com/">OwlTurd</a>
+					<a href="https://www.mrlovenstein.com">Lovenstein</a>
+					<a href="https://hotpapercomics.com">Hotpaper</a>
+				</div>
+			</div>
+		</div>
+		<div class="outline" id="outline"></div>
+		<input id="search" value="" placeholder="" type="input" spellcheck="false" autocomplete="off" >
+		
+		<script>
+			var $ = function(id){
+				return document.getElementById(id);
+			};
+			function leftHover(){
+				$("menu-left").setAttribute("style", "visibility: visible; opacity:1; transition:.2s;")
+				$("icon1-l").setAttribute("style", "visibility: hidden; opacity: 0; transition: .1s; pointer-event: none;");
+				$("icon2-l").setAttribute("style", "visibility: hidden; opacity: 0; transition: .1s; pointer-event: none;");
+				$("icon3-l").setAttribute("style", "visibility: hidden; opacity: 0; transition: .1s; pointer-event: none;");
+			}
+			function unleftHover(){
+				$("menu-left").setAttribute("style", "visibility: hidden; opacity:0; transition:.2s;")
+				$("icon1-l").setAttribute("style", "visibility: visible; opacity: 1; transition: .1s; pointer-event: none;");
+				$("icon2-l").setAttribute("style", "visibility: visible; opacity: 1; transition: .1s; pointer-event: none;");
+				$("icon3-l").setAttribute("style", "visibility: visible; opacity: 1; transition: .1s; pointer-event: none;");
+			}
+			function rightHover(){
+				$("menu-right").setAttribute("style", "visibility: visible; opacity:1; transition:.2s;");
+				$("icon1-r").setAttribute("style", "visibility: hidden; opacity: 0; transition: .1s; pointer-event: none;");
+				$("icon2-r").setAttribute("style", "visibility: hidden; opacity: 0; transition: .1s; pointer-event: none;");
+				$("icon3-r").setAttribute("style", "visibility: hidden; opacity: 0; transition: .1s; pointer-event: none;");
+			}
+			function unRightHover(){
+				$("menu-right").setAttribute("style", "visibility: hidden; opacity:0; transition:.2s;");
+				$("icon1-r").setAttribute("style", "visibility: visible; opacity: 1; transition: .1s; pointer-event: none;");
+				$("icon2-r").setAttribute("style", "visibility: visible; opacity: 1; transition: .1s; pointer-event: none;");
+				$("icon3-r").setAttribute("style", "visibility: visible; opacity: 1; transition: .1s; pointer-event: none;");
+			}
+			
+			randBack();
+			var searchVal = 1;	
+			
+			function searchSelector(){
+				switch(searchVal){
+					case 1:
+						googleSearch();
+						break;
+					case 2:
+						youtubeSearch();
+						break;
+					case 3:
+						googleImgSearch();
+						break;
+					case 4:
+						amazonSearch();
+						break;
+					case 5:
+						wikiSearch();
+						break;
+					case 6:
+						chanSearch();
+						break;
+				}
+			}
+			//search functions
+			function googleSearch(){
+				var query = $('search').value;
+				window.location = 'https://www.google.com/#q=' + query;
+			}		
+			function youtubeSearch(){
+				var query = $('search').value;
+				window.location = 'https://www.youtube.com/results?search_query=' + query;
+			}			
+			function googleImgSearch(){
+				var query = $('search').value;
+				window.location = 'https://www.google.com/search?tbm=isch&q=' + query;
+			}
+			function amazonSearch(){
+				var query = $('search').value;
+				window.location = 'https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=' + query;
+			}		
+			function wikiSearch(){
+				var query = $('search').value;
+				window.location = 'https://en.wikipedia.org/wiki/' + query;
+			}	
+			function chanSearch(){
+				var query = $('search').value;
+				window.location = 'http://4chan.org/' + query;
+			}
+			
+			//random image
+			function randBack(){
+				var randB = Math.floor(Math.random() * 1);
+				
+				switch (randB){
+					case 0:
+						$("image").style.backgroundImage = "url('1k.png')";
+						break;
+				}
+			}
+			
+			//key functions
+			document.onkeyup = function(e) {
+			  if (e.which == 32) {								//spacebar -- focus search
+				$("search").focus();		
+			  }else if (e.which == 27){  						//esc      -- blur search
+				$("search").blur();
+			  }else if (e.which == 46){							//delete   -- clear seach field
+				$("search").value = "";
+			  }else if (e.which == 13){							//enter    -- enter search field value
+				searchSelector();
+			  }else if (e.which == 49){							//1    	   -- changes search to google
+				searchVal = 1;
+				$("search").placeholder = "Google Search";
+			  }else if (e.which == 50){							//2        -- changes search to youtube
+				searchVal = 2;
+				$("search").placeholder = "YouTube Search";
+			  }else if (e.which == 51){							//3        -- changes search to google images
+				searchVal = 3;
+				$("search").placeholder = "Google Image Search";
+			  }else if (e.which == 52){							//4        -- changes search to amazon
+				searchVal = 4;
+				$("search").placeholder = "Amazon Search";
+			  }else if (e.which == 53){							//4        -- changes search to amazon
+				searchVal = 5;
+				$("search").placeholder = "Wikipedia Search";
+			  }else if (e.which == 54){							//4        -- changes search to amazon
+				searchVal = 6;
+				$("search").placeholder = "4chan Search (b / soc / wg...)";
+			  }
+			};
+			
+		</script>
+	</body>
+</html>
