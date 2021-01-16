@@ -1,0 +1,60 @@
+<html>
+
+<head>
+
+<style type="text/css">
+body {
+background-color: #211C21;
+color: #FFD4B1;
+font-size: 4em;
+font-weight: 500;
+font-family: "Yu Gothic";
+}
+</style>
+
+<script>
+//------------------------
+
+//To change background color or text color, just replace the style values above with the hex values for the colors you want.
+//To change font size, just change the em value to what works for you (the standard size is 1, I like it at 1.5).
+//To change font weight (boldness), just edit the value above.  100 is quite thin, 400 is default, 900 is quite thick.  You may want it higher than default for Mincho fonts.
+
+//To change the font itself, put the ENGLISH name of your font in between the quotation marks above (some JP font names are in Japanese, such as "三次元切絵字").
+//To find the English name of a given font, first install it, then open Firefox.
+//Go to about:preferences#content in the address bar, then click on the 'Default font' drop-down menu.
+//The "correct" name of your font will be listed here - just copy that down and paste it up above.
+
+//Note that if you are fine with whatever font you have now then you can just leave the quotation marks above blank and the default font will be used.
+//Your default is probably Gothic - if you want to try out a good Mincho font, try Aozora Mincho at http://www.freejapanesefont.com/aozora-mincho-download/
+//For various other free Japanese fonts, visit http://www.freejapanesefont.com/
+//For more font attribute information visit http://www.w3schools.com/css/css_font.asp
+
+//------------------------
+
+/**** Fun Stuff that you need to copy into your page ****/
+document.addEventListener("DOMNodeInserted", function () {
+  var LEEWAY = 200; // Amount of "leeway" pixels before latching onto the bottom.
+  
+  // Some obscene browser shit because making sense is for dweebs
+  var b = document.body;
+  var offset = b.scrollHeight - b.offsetHeight;
+  var scrollPos = (b.scrollTop+offset);
+  var scrollBottom = (b.scrollHeight - (b.clientHeight+offset));
+  
+  // If we are at the bottom, go to the bottom again.
+  if (scrollPos >= scrollBottom - LEEWAY) {
+    window.scrollTo(0,document.body.scrollHeight);
+  }
+  
+}, false);
+/**** End of the Fun Stuff ****/
+</script>
+</head>
+
+
+<body>
+
+</body>
+
+
+</html>
