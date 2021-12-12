@@ -6,7 +6,7 @@ body{
 	background-image: url("tans.png");
 }
 p{
-	color: #fe9383;
+	color: ##33535b;
 	font-size: 18px;
 }
 p::before{
@@ -17,7 +17,7 @@ p::after{
 }
 a{
 	padding: .1em;
-	color: #FFD4B1;
+	color: #801722;
 	text-decoration: none;
 	font-family: fonty;
 	font-size: 16px;
@@ -29,7 +29,7 @@ a:hover{
 /*=======Image=======*/
 .image{
 	position: absolute;
-	border: 0px solid #E55264;
+	border: 0px solid #33535b;
 	height: 30%;
 	width: 25%;
 	top: 25%;
@@ -66,7 +66,7 @@ input:focus{
 /*=======Container=======*/
 .container{
 	position: absolute;
-	border: 1px solid #E55264;
+	border: 1px solid #33535b;
 	background: transparent;
 	width: 6%;
 	height: 30%;
